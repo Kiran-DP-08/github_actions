@@ -1,13 +1,8 @@
-name: first-pipeline
+name: workflow-events
 on: push
 jobs:
-  echo-hello:
+  echo:
     runs-on: ubuntu-latest
     steps:
-      - name: echo hello world
-        run: echo "Hello World"
-  echo-goodbye:
-    runs-on: ubuntu-latest
-    steps:
-      - name: echo goodbye world
-        run: echo "Goodbye World"
+      -name: show the trigger
+       run: echo "Workflow triggered by ${{ github.event_name }} event"
