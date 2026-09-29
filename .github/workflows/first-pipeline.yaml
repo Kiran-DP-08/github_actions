@@ -4,5 +4,5 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      -name: show the trigger
-       run: echo "Workflow triggered by ${{ github.event_name }} event"
+      - name: show the trigger
+        run: echo "Workflow triggered by ${{ github.event_name }} event"
