@@ -4,6 +4,6 @@ env:
  app_name: login-app
 jobs:
  build:
-    - runs-on: ubuntu-latest
-      steps: 
-        - run: echo $app_name
+   runs-on: ubuntu-latest
+   steps: 
+    - run: echo $app_name
