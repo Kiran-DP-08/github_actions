@@ -1,8 +1,9 @@
-name: python-install
+name: demo 
 on: push
+env: 
+ app_name: login-app
 jobs:
-  python:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Setup Python
-        uses: actions/setup-python@v7.0.0
+ build:
+    - runs-on: ubuntu-latest
+      steps: 
+        - run: echo $app_name
