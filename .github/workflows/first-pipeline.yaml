@@ -1,8 +1,15 @@
-name: workflow-events
-on: pull_request
-jobs:
-  echo:
+name: branch based deployment 
+on: push
+jobs: 
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - name: show the trigger
-        run: echo "Workflow triggered by ${{ github.event_name }} event"
+    steps: 
+      - name: build application
+        run: echo "Building application" 
+  deploy:
+   needs: build
+   if: github.ref == 'refs/heads/main'
+   runs-on: ubuntu-latest
+   steps: 
+      - name: deploy application
+        run: echo "Deploying application"  
