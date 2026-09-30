@@ -1,8 +1,8 @@
-name: java-install
+name: python-install
 on: push
 jobs:
-  java:
+  python:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Java JDK
-        uses: actions/setup-java@v5
+      - name: Setup Python
+        uses: actions/setup-python@v7.0.0
